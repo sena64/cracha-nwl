@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu cartão</title>
+  
+  <link rel="stylesheet" href="style.css"> <!--Linka a um arquivo no qual é possível modficar todos os css. É pra ficar mais organizado seu código-->
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com"> <!--Usando o site Fonts.google, ele disponibiliza o link-código com a fonte para ser usada em todo o código-->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  
+</head>
+
+<body>
+  <main>
+    <div class="container"> <!--Contém um grupo inteiro do meu site-->
+      <div class="avatar">
+        <span> <!--Abre uma subcategoria dentro do meu div avatar-->
+          <img src="images/Selo.svg" alt="">
+        </span>
+        <img id="userImage" src="images/Kip_wink.png"  width="185" height="185" alt="Kip Silverpoint">
+      </div>
+      
+     <h1 id="userName"> Lucas Sena</h1>
+        <a id="userLink" href="https://github.com/sena64" target="_blank" style="text-decoration: none;"> <!-- O comando target="_blank" faz com que o link abra em outra pag-->
+          <img src="images/github.svg" alt="github"><span id="userLogin" >Lucas Sena</span></a> <!--O Arquivo SVG é basicamente várias linhas de código que formam uma imagem em HTML, ou seja, gera uma imagem em alta definição sem ocupar tanto espaço. Peso de arquivo é essencial na programação! -->
+          <p id="userBio">An instructor focused on helping pople start programming for web</p>
+          <ul id="socialLinks">
+            <li class="youtube">
+              <a href="https://www.youtube.com/channel/UCODXDFXZ31s41kVRgQVuwoA" target="_blank" > <img src="images/Youtube.svg
+              " alt=""> </a>
+            <li class="instagram"> 
+              <a href="https://www.instagram.com/senameiaquack/" target="_blank"> 
+                <img src="images/Instagram.svg" alt="Ins"></a>
+            <li class="facebook">
+              <a href="https://www.facebook.com/Luskinhs" target="_blank"> 
+                <img src="images/Facebook.svg" alt="Face"></a>
+            <li class="twitter"> 
+              <a href="https://twitter.com/Luskinhs" target="_blank"> 
+                <img src="images/Twitter.svg" alt="TT"></a>
+          </ul>
+    </div>
+  </main>
+  <script src="main.js" > </script>
+</body>
+</html>

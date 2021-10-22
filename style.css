@@ -1,0 +1,79 @@
+*{
+  margin: 0;
+} /* O Asteristico(*) representa a propriedade de todas as tags, ou seja, se muda-lo ira mudar consigo todo o resto do site. É prático, mas SE LIGA HEIN */
+html, body {
+  --black: hsl(240,6%,13%); /* Hue  Saturation Lighting. Aqui eu puz uma variavel para todo o meu site, logo, se eu por a tag  color:var(--nome) eu tenho uma cor geral que pode ser mudada de uma vez! sem precisar ir uma por uma */
+  --grey: hsl(240,9%,89%);
+  height: 100%; 
+  font-family: 'Roboto', sans-serif; /* usando de ref. a font que eu peguei no index. O Sans-serif neste código serve como uma segunda opção caso ele não encontre a fonte roboto. Ela também é uma fonte mais redonda, tirando esses pezinhos que tem embaixo dos "i" "I" e outros */
+  -webkit-font-smoothing:antialiased; /*deixa a fonte mais suave. com menos serrilhado*/
+}
+
+body {
+  display: grid; /*Centraliza o seu site, tanto horizontalmente quanto verticalmente*/ 
+  place-items: center; /*funciona graças ao "grid" e ele basicamente centraliza os itens dentro do body*/
+}
+
+main {
+background: url(images/Mobile.jpg); /* Atribui ao fundo uma imagem*/
+width:375px; 
+height: 100%;
+color: var(--grey);
+}
+
+.container {
+  max-width: 250px;
+  margin-left: auto; /*Isto entra em conceito de Box model, caso esqueça pesquise melhor sobre isso depois*/
+  margin-right: auto; 
+  text-align: center;
+
+}
+
+.avatar{
+  width: 10rem;/*rem é uma medida que se baseia nos pixeis do site(pesquisar melhor depois)*/
+  margin:11.5rem auto 0 ;
+  position: relative; /*Sem esta tag o Top usa como referencia a tela inteira e não apenas o bloco selecionado*/
+}
+.avatar span /*quando separados ele busca o nome dentro da pasta,como aqui ele ta buscando o span dentro de avatar*/ 
+{
+ position: absolute; /*deixa o objeto sobressair os demais*/
+ top: -15px; 
+ z-index: 1; /*z é o eixo de profundidade, caso de erro é bom pra fortificar :D*/
+}
+.avatar > img /*o sinal de > serve para pegar a primeira tag dentro do bloco*/{
+  width: 10rem;
+  height: 11.5;
+  object-fit: cover; /*evita que a img fique esticada ou desproporcional*/
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); /*Mexe nos poligonos da imagem. Usa o site Clippy Css pra conseguir pegar as definições do poligono*/
+}
+h1 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+a /*tudo isso ta alinhando o texto com a img*/ {
+  color: var(--grey)
+  text-decoration: none;/*sempre bom lembrar, limpa as decorações do texto*/
+  
+  margin-top: 0.25rem;
+  
+  display: flex; /*apresenta o conteudo em flexbox*/
+  gap: 0.75rem;
+
+  justify-content:center;
+  align-items:center;
+}
+
+p{
+margin-top: 2rem;
+}
+
+ul{
+margin-top: 4rem;
+display: flex;
+list-style: none; /*tira as marcações da lista*/
+padding: 0rem; /* aparentemente, é a distancia do topo*/
+gap: 0.5rem; /*Espaçamento entre os itens*/
+justify-content: center
+;
+}
